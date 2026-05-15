@@ -9,9 +9,8 @@ body {
   color: white;
 }
 
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
-              url('chicken.jpeg') center/cover no-repeat;
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+            url('chicken.jpeg') center/80% no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
