@@ -57,12 +57,14 @@ h1 {
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 14px 28px;  /* increased padding */
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
   transition: 0.2s;
+  min-width: 140px;    /* forces both buttons to be same width */
+  text-align: center;
 }
 
 .btn-call {
@@ -86,8 +88,9 @@ h1 {
 .tagline {
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.8rem;  /* was 1.4rem */
+  font-weight: 700;   /* makes it bold */
   margin-top: 30px;
   color: #E6C07B;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
