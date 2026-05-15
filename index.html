@@ -1,185 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Msosha Bites | Chicken Dust Grill</title>
-<style>
-  :root {
-    --maroon: #8B1E1E;
-    --gold: #D4A017;
-    --dark: #1a1a1a;
-  }
-
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Arial', sans-serif;
-    color: var(--dark);
-    line-height: 1.5;
-  }
-
-  .hero {
-    background: var(--maroon);
-    color: white;
-    padding: 50px 20px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero {
-  background: linear-gradient(rgba(139, 30, 30, 0.85), rgba(139, 30, 30, 0.85)), 
-              url('chicken.jpeg') center/cover no-repeat;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-  .brand {
-    color: var(--gold);
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-  }
-
-  .title {
-    font-size: clamp(2.8rem, 9vw, 5rem);
-    font-weight: 900;
-    line-height: 1;
-    margin: 15px 0 30px;
-  }
-
-  .food-img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    display: block;
-  }
-
-  .info {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .pricing {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-
-  .contact {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-
-  .btn-group {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
-  }
-
-  .btn {
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.2s;
-  }
-
-  .btn-call {
-    background: var(--maroon);
-    color: white;
-  }
-
-  .btn-call:hover {
-    background: #6b1717;
-  }
-
-  .btn-wa {
-    background: #25D366;
-    color: white;
-  }
-
-  .btn-wa:hover {
-    background: #1ebe5d;
-  }
-
-  .tagline {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 1.6rem;
-    margin-top: 30px;
-    color: var(--maroon);
-  }
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #666;
-    border-top: 1px solid #eee;
-  }
-
-  @media (min-width: 768px) {
-    .info {
-      text-align: left;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .tagline {
-      grid-column: 1 / -1;
-      text-align: center;
-    }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Msosha Bites | Chicken Dust Grill</title>
+  
+  <!-- This line connects HTML to CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <section class="hero">
     <div class="brand">MSOSHA BITES</div>
-    <h1 class="title">CHICKEN<br>DUST GRILL</h1>
-  </section>
-
-  <img src="chicken.jpg" alt="Flame grilled chicken dust" class="food-img">
-
-  <section class="info">
-    <div>
-      <p class="pricing">FULL - R120<br>HALF - R60</p>
-      <p class="contact">0836239910 / 0749661890</p>
+    <h1>CHICKEN<br>DUST GRILL</h1>
+    
+    <p class="pricing">FULL - R120<br>HALF - R60</p>
+    <p class="contact">0836239910 / 0749661890</p>
+    
+    <p class="desc">Enjoy a flame grilled chicken with your favorite sauce, either hot, mild or bbq.</p>
+    
+    <div class="btn-group">
+      <a href="tel:0836239910" class="btn btn-call">Call to Order</a>
+      <a href="https://wa.me/27836239910?text=Hi%20Msosha%20Bites,%20I%20want%20to%20order" class="btn btn-wa">Order on WhatsApp</a>
     </div>
-
-    <div>
-      <p>Enjoy a flame grilled chicken with your favorite sauce, either hot, mild or bbq.</p>
-      <div class="btn-group">
-        <a href="tel:0836239910" class="btn btn-call">Call to Order</a>
-        <a href="https://wa.me/27836239910?text=Hi%20Msosha%20Bites,%20I%20want%20to%20order%20Chicken%20Dust%20Grill" 
-           class="btn btn-wa">Order on WhatsApp</a>
-      </div>
-    </div>
-
+    
     <p class="tagline">A taste that you will never forget</p>
   </section>
-
-  <footer>
-    © 2025 Msosha Bites. All Rights Reserved.
-  </footer>
 
 </body>
 </html>
