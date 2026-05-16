@@ -3,253 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Msosha Grilled Chicken</title>
+<title>Msosha Bites</title>
 
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff8f0;
-    color: #333;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  /* HEADER */
-  .header {
-    background: linear-gradient(135deg, #ff4d00, #ff9900);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-  }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff8f0, #ffe6cc);
+  color: #333;
+}
 
-  .header h1 {
-    margin: 0;
-    font-size: 2.5em;
-  }
+/* MAIN CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 25px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
 
-  .header p {
-    margin-top: 10px;
-    font-size: 1.2em;
-  }
+/* HEADER */
+.header {
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('chicken.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 20px;
+}
 
-  /* MENU SECTION */
-  .menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
+.header h1 {
+  margin: 0;
+  font-size: 2.7em;
+}
 
-  .card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
+.header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
 
-  .card:hover {
-    transform: scale(1.03);
-  }
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  margin: 35px 0 20px;
+  color: #c0392b;
+}
 
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
+/* MENU GRID */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
 
-  .card-content {
-    padding: 15px;
-  }
+/* CARDS */
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
 
-  .price {
-    color: #ff4d00;
-    font-weight: bold;
-    font-size: 18px;
-  }
+.card:hover {
+  transform: translateY(-6px);
+}
 
-  /* BUTTON */
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background: #25D366;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
 
-  .btn:hover {
-    background: #1ebe5d;
-  }
+.card-content {
+  padding: 18px;
+}
 
-  /* REVIEWS SECTION */
-  .reviews-title {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .reviews-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
+.price {
+  color: #ff4d00;
+  font-weight: bold;
+  font-size: 18px;
+}
 
-  .review-card {
-    background: #fff;
-    border-left: 5px solid #ff4d00;
-    padding: 20px;
-    border-radius: 0 15px 15px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #25D366;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  .stars {
-    color: #ff9900;
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
+.btn:hover {
+  background: #1ebe5d;
+}
 
-  .review-text {
-    font-style: italic;
-    color: #555;
-    margin: 0 0 10px 0;
-  }
+/* REVIEWS */
+.reviews {
+  margin-top: 40px;
+}
 
-  .review-author {
-    font-weight: bold;
-    font-size: 14px;
-    color: #111;
-  }
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 20px;
+}
 
-  /* FOOTER */
-  .footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    background: #111;
-    color: white;
-  }
+.review-card {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #ff4d00;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: #ff9900;
+  margin-bottom: 8px;
+}
+
+/* REVIEW BUTTON */
+.review-btn {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.review-btn a {
+  display: inline-block;
+  background: #ff4d00;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #111;
+  color: white;
+}
 </style>
 </head>
 
 <body>
 
-<div class="header">
-  <h1>🔥 Msosha Bites</h1>
-  <p><b>A Taste You'll Never Forget</b></p>
-</div>
-<h2 style="text-align:center; margin-top:30px;">🔥 Our Menu</h2>
+<div class="container">
 
-<div class="menu">
+  <div class="header">
+    <h1>🔥 Msosha Bites</h1>
+    <p><b>A Taste You'll Never Forget</b></p>
+  </div>
 
-  <!-- CHICKEN -->
-  <div class="card">
-    <img src="chicken.jpeg" alt="Msosha Grilled Chicken" />
-    <div class="card-content">
-      <h3>🍗 Grilled Chicken</h3>
-      <p class="price">From R35</p>
-      <button class="btn" onclick="order('Grilled Chicken')">Order Chicken</button>
+  <h2 class="section-title">🔥 Our Menu</h2>
+
+  <div class="menu">
+
+    <div class="card">
+      <img src="quarter-chicken.jpg">
+      <div class="card-content">
+        <h3>🍗 Quarter Chicken</h3>
+        <p class="price">R35</p>
+        <button class="btn" onclick="order('Quarter Chicken')">Order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="half-chicken.jpg">
+      <div class="card-content">
+        <h3>🍗 Half Chicken</h3>
+        <p class="price">R60</p>
+        <button class="btn" onclick="order('Half Chicken')">Order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="full-chicken-22.jpeg">
+      <div class="card-content">
+        <h3>🍗 Full Chicken</h3>
+        <p class="price">R120</p>
+        <button class="btn" onclick="order('Full Chicken')">Order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="chips.jpg">
+      <div class="card-content">
+        <h3>🍟 Crispy Chips</h3>
+        <p class="price">From R20</p>
+        <button class="btn" onclick="order('Chips')">Order Chips</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="drinks.jpg">
+      <div class="card-content">
+        <h3>🥤 Cold Drinks</h3>
+        <p class="price">From R18</p>
+        <button class="btn" onclick="order('Cold Drink')">Order Drink</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="reviews">
+    <h2 class="section-title">⭐ Customer Reviews</h2>
+
+    <div class="reviews-container">
+
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"The best flame grilled chicken in Ngwelezane!"</p>
+        <strong>- Thabo M.</strong>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Great service and fast ordering through WhatsApp."</p>
+        <strong>- Lerato K.</strong>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Always fresh, hot, and delicious."</p>
+        <strong>- Sipho Z.</strong>
+      </div>
+
     </div>
   </div>
 
-  <!-- CHIPS -->
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/vilakazibuyisiwe2-ops/Msosha-Bites/main/mitchell-luo-ChXHveqrb28-unsplash.jpg" />
-    <div class="card-content">
-      <h3>🍟 Crispy Chips</h3>
-      <p class="price">From R20</p>
-      <button class="btn" onclick="order('Chips')">Order Chips</button>
-    </div>
+  <div class="review-btn">
+    <p>Want to share your experience?</p>
+    <a href="https://wa.me/27836239910">✍️ Send Us Your Review</a>
   </div>
 
-  <!-- DRINKS -->
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/vilakazibuyisiwe2-ops/Msosha-Bites/main/andrey-ilkevich-Qvnohn4GyJA-unsplash.jpg" />
-    <div class="card-content">
-      <h3>🥤 Cold Drinks</h3>
-      <p class="price">From R18</p>
-      <button class="btn" onclick="order('Cold Drink')">Order Drink</button>
-    </div>
+  <div class="footer">
+    📍 Available @ Ngwelezane Newtown A | ⏰ Open Daily | 🔥 Msosha Bites
   </div>
 
-<div class="menu">
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/vilakazibuyisiwe2-ops/Msosha-Bites/main/vaishnav-chogale-9YfKH3VEHJ0-unsplash.jpg" />
-    <div class="card-content">
-      <h3>Quarter Chicken</h3>
-      <p class="price">R35</p>
-      <button class="btn" onclick="order('Quarter Chicken')">Order Now</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/vilakazibuyisiwe2-ops/Msosha-Bites/main/Half-Chicken.jpeg" alt="Grilled Half Chicken" style="width:300px; border-radius:10px;">
-    <div class="card-content">
-      <h3>Half Chicken</h3>
-      <p class="price">R60</p>
-      <button class="btn" onclick="order('Half Chicken')">Order Now</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://github.com/vilakazibuyisiwe2-ops/Msosha-Bites/blob/main/full%20chicken%2022.jpeg" alt="Full Grilled Chicken" />
-    <div class="card-content">
-      <h3>Full Chicken</h3>
-      <p class="price">R120</p>
-      <button class="btn" onclick="order('Full Chicken')">Order Now</button>
-    </div>
-  </div>
-
-</div>
-
-<h2 class="reviews-title">⭐ Customer Reviews</h2>
-
-<div class="reviews-container">
-
-  <!-- Review 1 -->
-  <div class="review-card">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p class="review-text">"The best flame grilled chicken in Ngwelezane! The meat is so tender and juicy."</p>
-    <div class="review-author">- Thabo M.</div>
-  </div>
-
-  <!-- Review 2 -->
-  <div class="review-card">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p class="review-text">"Great service and fast ordering through WhatsApp. The combo meal is big enough to share."</p>
-    <div class="review-author">- Lerato K.</div>
-  </div>
-
-  <!-- Review 3 -->
-  <div class="review-card">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p class="review-text">"Always fresh, hot, and delicious. Highly recommend the chips too!"</p>
-    <div class="review-author">- Sipho Z.</div>
-  </div>
-
-</div>
-
-<!-- Interactive Review Button -->
-<div style="text-align: center; padding: 20px;">
-  <p>Want to share your experience?</p>
-  <a href="https://wa.me:" 
-     target="_blank" 
-     style="display: inline-block; background: #ff4d00; color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
-     ✍️ Send Us Your Review
-  </a>
-</div>
-
-<div class="footer">
-  📍 Available @ Ngwelezane Newtown A | ⏰ Open Daily | 🔥 Msosha Bites
 </div>
 
 <script>
 function order(item) {
-  let phone = "27836239910"; 
+  let phone = "27836239910";
   let message = `Hi, I want to order: ${item} from Msosha Bites.`;
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
