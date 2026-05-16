@@ -85,6 +85,45 @@
     background: #1ebe5d;
   }
 
+  /* REVIEWS SECTION */
+  .reviews-title {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .review-card {
+    background: #fff;
+    border-left: 5px solid #ff4d00;
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .stars {
+    color: #ff9900;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .review-text {
+    font-style: italic;
+    color: #555;
+    margin: 0 0 10px 0;
+  }
+
+  .review-author {
+    font-weight: bold;
+    font-size: 14px;
+    color: #111;
+  }
+
   /* FOOTER */
   .footer {
     text-align: center;
@@ -93,7 +132,6 @@
     background: #111;
     color: white;
   }
-
 </style>
 </head>
 
@@ -109,9 +147,8 @@
 
   <!-- CHICKEN -->
   <div class="card">
-        <img src="chicken.jpeg" alt="Msosha Grilled Chicken" />
-
-   <div class="card-content">
+    <img src="chicken.jpeg" alt="Msosha Grilled Chicken" />
+    <div class="card-content">
       <h3>🍗 Grilled Chicken</h3>
       <p class="price">From R35</p>
       <button class="btn" onclick="order('Grilled Chicken')">Order Chicken</button>
@@ -171,7 +208,7 @@
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc500f" />
+    <img src="chicken.jpeg" alt="Full Grilled Chicken" />
     <div class="card-content">
       <h3>Full Chicken</h3>
       <p class="price">R120</p>
@@ -181,18 +218,52 @@
 
 </div>
 
+<h2 class="reviews-title">⭐ Customer Reviews</h2>
+
+<div class="reviews-container">
+
+  <!-- Review 1 -->
+  <div class="review-card">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p class="review-text">"The best flame grilled chicken in Ngwelezane! The meat is so tender and juicy."</p>
+    <div class="review-author">- Thabo M.</div>
+  </div>
+
+  <!-- Review 2 -->
+  <div class="review-card">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p class="review-text">"Great service and fast ordering through WhatsApp. The combo meal is big enough to share."</p>
+    <div class="review-author">- Lerato K.</div>
+  </div>
+
+  <!-- Review 3 -->
+  <div class="review-card">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p class="review-text">"Always fresh, hot, and delicious. Highly recommend the chips too!"</p>
+    <div class="review-author">- Sipho Z.</div>
+  </div>
+
+</div>
+
+<!-- Interactive Review Button -->
+<div style="text-align: center; padding: 20px;">
+  <p>Want to share your experience?</p>
+  <a href="https://wa.me:" 
+     target="_blank" 
+     style="display: inline-block; background: #ff4d00; color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
+     ✍️ Send Us Your Review
+  </a>
+</div>
+
 <div class="footer">
-  📍 Available @ Ngwelezane Newtown A| ⏰ Open Daily | 🔥 Msosha Bites
+  📍 Available @ Ngwelezane Newtown A | ⏰ Open Daily | 🔥 Msosha Bites
 </div>
 
 <script>
 function order(item) {
-  let phone = "27836239910"; // IMPORTANT: use country code (27 for SA, no leading 0)
-
+  let phone = "27836239910"; 
   let message = `Hi, I want to order: ${item} from Msosha Bites.`;
-
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
   window.open(url, "_blank");
 }
 </script>
