@@ -100,8 +100,53 @@
 <body>
 
 <div class="header">
-  <h1>🔥 Msosha Grilled Chicken</h1>
-  <p>Fresh, juicy, flame-grilled chicken made daily</p>
+  <h1>🔥 Msosha Bites</h1>
+  <p><b>A Taste You'll Never Forget</b></p>
+</div>
+<h2 style="text-align:center; margin-top:30px;">🔥 Our Menu</h2>
+
+<div class="menu">
+
+  <!-- CHICKEN -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc500f" />
+    <div class="card-content">
+      <h3>🍗 Grilled Chicken</h3>
+      <p class="price">From R35</p>
+      <button class="btn" onclick="order('Grilled Chicken')">Order Chicken</button>
+    </div>
+  </div>
+
+  <!-- CHIPS -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086" />
+    <div class="card-content">
+      <h3>🍟 Crispy Chips</h3>
+      <p class="price">From R20</p>
+      <button class="btn" onclick="order('Chips')">Order Chips</button>
+    </div>
+  </div>
+
+  <!-- DRINKS -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" />
+    <div class="card-content">
+      <h3>🥤 Cold Drinks</h3>
+      <p class="price">From R18</p>
+      <button class="btn" onclick="order('Cold Drink')">Order Drink</button>
+    </div>
+  </div>
+
+  <!-- COMBO -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1606756790138-261d2b21cd75" />
+    <div class="card-content">
+      <h3>🍱 Combo Meal</h3>
+      <p class="price">From R70</p>
+      <button class="btn" onclick="order('Combo Meal')">Order Combo</button>
+    </div>
+  </div>
+
 </div>
 
 <div class="menu">
@@ -128,7 +173,7 @@
     <img src="https://images.unsplash.com/photo-1604908176997-125f25cc500f" />
     <div class="card-content">
       <h3>Full Chicken</h3>
-      <p class="price">R110</p>
+      <p class="price">R120</p>
       <button class="btn" onclick="order('Full Chicken')">Order Now</button>
     </div>
   </div>
@@ -136,15 +181,17 @@
 </div>
 
 <div class="footer">
-  📍 Available in Johannesburg | ⏰ Open Daily | 🔥 Msosha Grilled Chicken
+  📍 Available @ Ngwelezane Newtown A| ⏰ Open Daily | 🔥 Msosha Bites
 </div>
 
 <script>
 function order(item) {
-  let phone = "27700000000"; // replace with real number
-  let message = `Hi, I want to order: ${item} from Msosha Grilled Chicken.`;
+  let phone = "27836239910"; // IMPORTANT: use country code (27 for SA, no leading 0)
+
+  let message = `Hi, I want to order: ${item} from Msosha Bites.`;
 
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
   window.open(url, "_blank");
 }
 </script>
