@@ -1,31 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Msosha Bites | Chicken Dust Grill</title>
-  
-  <!-- This line connects HTML to CSS -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Msosha Grilled Chicken</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    color: #333;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #ff4d00, #ff9900);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+
+  .header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+  /* MENU SECTION */
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .price {
+    color: #ff4d00;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  /* BUTTON */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .btn:hover {
+    background: #1ebe5d;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background: #111;
+    color: white;
+  }
+
+</style>
 </head>
+
 <body>
 
-  <section class="hero">
-  <div class="brand">MSOSHA BITES</div>
-  <h1>CHICKEN<br>DUST GRILL</h1>
-  
-  <p class="pricing">FULL - R120<br>HALF - R60</p>
-  <p class="contact">0836239910 / 0749661890</p>
-  
-  <p class="desc">Enjoy a flame grilled chicken with your favorite sauce, either hot, mild or bbq.</p>
-  
-  <div class="btn-group">
-    <a href="tel:0836239910" class="btn btn-call">Call to Order</a>
-    <a href="https://wa.me/27836239910?text=Hi%20Msosha%20Bites,%20I%20want%20to%20order" class="btn btn-wa">WhatsApp</a>
+<div class="header">
+  <h1>🔥 Msosha Grilled Chicken</h1>
+  <p>Fresh, juicy, flame-grilled chicken made daily</p>
+</div>
+
+<div class="menu">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1606756790138-261d2b21cd75" />
+    <div class="card-content">
+      <h3>Quarter Chicken</h3>
+      <p class="price">R35</p>
+      <button class="btn" onclick="order('Quarter Chicken')">Order Now</button>
+    </div>
   </div>
-  
-  <p class="tagline">A taste that you will never forget</p>
-</section>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791" />
+    <div class="card-content">
+      <h3>Half Chicken</h3>
+      <p class="price">R60</p>
+      <button class="btn" onclick="order('Half Chicken')">Order Now</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc500f" />
+    <div class="card-content">
+      <h3>Full Chicken</h3>
+      <p class="price">R110</p>
+      <button class="btn" onclick="order('Full Chicken')">Order Now</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  📍 Available in Johannesburg | ⏰ Open Daily | 🔥 Msosha Grilled Chicken
+</div>
+
+<script>
+function order(item) {
+  let phone = "27700000000"; // replace with real number
+  let message = `Hi, I want to order: ${item} from Msosha Grilled Chicken.`;
+
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
